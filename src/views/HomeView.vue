@@ -285,10 +285,20 @@ const orderTotalPrice = computed(() => {
   }, 0)
 })
 // 取得圖片的網址
-const getImageUrl = (path) => {
-  const clearPath = path.replace('@/', '../')
-  return new URL(`${clearPath}`, import.meta.url).href
-}
+const getImageUrl = computed(() => {
+  return (path) => {
+    if (!path) return ''
+
+    try {
+      // 移除 @ 符號並修正路徑
+      const cleanPath = path.replace('@/', '../')
+      return new URL(cleanPath, import.meta.url).href
+    } catch (error) {
+      console.error('圖片載入失敗:', error)
+      return ''
+    }
+  }
+})
 // 取得購物車商品總數量
 const getCartTotal = () => {
   cartTotalCount.value = 0

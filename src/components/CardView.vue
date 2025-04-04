@@ -165,7 +165,15 @@ const handleAddToCart = (data, type) => {
 }
 // imageUrl 根據當前的斷點來選擇對應的圖片
 const imageUrl = computed(() => {
-  const clearPath = currentImage.value.replace('@/', '../')
-  return new URL(`${clearPath}`, import.meta.url).href
+  const path = currentImage.value
+  if (!path) return ''
+
+  try {
+    const cleanPath = path.replace('@/', '../')
+    return new URL(cleanPath, import.meta.url).href
+  } catch (error) {
+    console.error('圖片載入失敗:', error)
+    return ''
+  }
 })
 </script>
