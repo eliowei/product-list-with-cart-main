@@ -33,9 +33,9 @@
 
 ### 網站連結
 
-- 解決方案網址：[點我查看]()
+- 解決方案網址：[點我查看](https://github.com/eliowei/product-list-with-cart-main)
 
-- 實際網站網址：[前往查看]()
+- 實際網站網址：[前往查看](https://eliowei.github.io/product-list-with-cart-main/#/)
 
 ## 開發過程
 
