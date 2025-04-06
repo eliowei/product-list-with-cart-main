@@ -1,19 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "allowJs": true,
-    "checkJs": true,
-    "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["node_modules", "dist"]
 }
